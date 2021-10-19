@@ -46,7 +46,7 @@
 
       <section id="transaction">
         <h2 class="sr-only">Transações</h2>
-        <a href="#" class="button new" onclick="Modal.open()">+ Nova Transação</a>
+        <a href="#" class="button new" onclick="Modal.toggle()">+ Nova Transação</a>
         <table id="data-table">
           <thead>
             <tr>
@@ -56,32 +56,7 @@
               <th></th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td class="description">Luz</td>
-              <td class="expense">- R$ 500,00</td>
-              <td class="date">23/01/2021</td>
-              <td>
-                <img src="./assets/minus.svg" />
-              </td>
-            </tr>
-            <tr>
-              <td class="description">Criação Website</td>
-              <td class="income">R$ 5.000,00</td>
-              <td class="date">23/01/2021</td>
-              <td>
-                <img src="./assets/minus.svg" />
-              </td>
-            </tr>
-            <tr>
-              <td class="description">Internet</td>
-              <td class="expense">- R$ 200,00</td>
-              <td class="date">23/01/2021</td>
-              <td>
-                <img src="./assets/minus.svg" />
-              </td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
       </section>
     </main>
@@ -108,7 +83,7 @@
             </div>
 
             <div class="input-group actions">
-              <a href="#" class="button cancel" onclick="Modal.close()">Cancelar</a>
+              <a href="#" class="button cancel" onclick="Modal.toggle()">Cancelar</a>
               <button>Salvar</button>
             </div>
           </form>
@@ -118,15 +93,6 @@
 
     <footer>dev.finance$</footer>
 
-    <script>
-      const Modal = {
-        open() {
-          document.querySelector(".modal-overlay").classList.add("active");
-        },
-        close() {
-          document.querySelector(".modal-overlay").classList.remove("active");
-        },
-      };
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
